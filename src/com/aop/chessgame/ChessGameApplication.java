@@ -37,7 +37,7 @@ public class ChessGameApplication extends JFrame implements ChessGameListener, M
 		// create PlaceHolder for games/panes
 		this.placeHolder = new JPanel();
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-	    setPreferredSize(new Dimension(400, 300));
+	    setPreferredSize(new Dimension(500, 400));
 	    pack();
 	    setLocationRelativeTo(null);
 	    setVisible(true);
