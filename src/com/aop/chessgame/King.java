@@ -6,7 +6,6 @@ public class King extends Coin {
 
 	  @Override
 	  public boolean canMove(int dest, ChessGame game) {
-	    // TODO Auto-generated method stub
 	    if (isStrightAndFree(getPosition(), dest, game) || isDiagnalAndFree(getPosition(), dest, game)) {
 	      return true;
 	    }
