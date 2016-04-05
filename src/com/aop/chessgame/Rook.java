@@ -26,6 +26,7 @@ public class Rook extends Coin {
 				// make sure all are free
 				if (game.getCoin(getIndex(currentRow, x)) != null) {
 					return false;
+					/////sdfgsdfg
 				}
 
 			}
