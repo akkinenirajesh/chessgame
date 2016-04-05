@@ -10,7 +10,6 @@ package com.aop.chessgame;
 	  public boolean canMove(int dest, ChessGame game) {
 	    if (isStraightAndFree(getPosition(), dest, game)){
 	        return true;
-	    // TODO Auto-generated method stub
 	    }
 	    return false;
 	  }
