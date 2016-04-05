@@ -10,4 +10,5 @@ public class Bishop extends Coin {
 		// TODO Auto-generated method stub
 		return false;
 	}
+	//
 }
