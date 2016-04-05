@@ -1,7 +1,12 @@
 package com.aop.chessgame;
 
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Container;
 import java.awt.Dimension;
+import java.awt.GridLayout;
 
+import javax.swing.BorderFactory;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JMenu;
@@ -34,22 +39,23 @@ public class ChessGameApplication extends JFrame implements ChessGameListener, M
 	public ChessGameApplication() {
 		// Create Menus
 		createMenus();
-		//show the size and of window 
+		// show the size and of window
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-	    setPreferredSize(new Dimension(800, 800));
-	    pack();
-	    setLocationRelativeTo(null);
-	    setVisible(true);
+		setPreferredSize(new Dimension(800, 800));
+		pack();
+		setLocationRelativeTo(null);
+		setVisible(true);
 		// create PlaceHolder for games/panes
-		this.placeHolder = new JPanel();
-		this.add(this.placeHolder);
+		placeHolder = new JPanel();
+		add(placeHolder);
 		// Create Status bar
+
 		createStatusBar();
 	}
 
 	private void createStatusBar() {
 		statusBar = new JLabel();
-		this.add(statusBar);
+		add(statusBar);
 	}
 
 	private void createMenus() {
@@ -88,6 +94,11 @@ public class ChessGameApplication extends JFrame implements ChessGameListener, M
 
 	private void onNewGame() {
 		// Show a pane that asks for username and port to listen on
+
+		this.getContentPane().setLayout(new BorderLayout());
+		this.placeHolder = new JPanel();
+		this.getContentPane().add(this.placeHolder, BorderLayout.PAGE_START);
+		this.placeHolder.setBorder(BorderFactory.createLineBorder(Color.black));
 		this.placeHolder.removeAll();
 		this.placeHolder.add(new NewGamePane(this));
 	}
@@ -98,6 +109,7 @@ public class ChessGameApplication extends JFrame implements ChessGameListener, M
 	void onNewGame(int port, String userName) {
 		this.areWeHosting = true;
 		// Create Server Socket and wait for connections
+
 		this.server = new GameServer(null, port, userName);
 		server.start();
 		this.server.setGameListener(this);
