@@ -38,12 +38,12 @@ public class ChessGameApplication extends JFrame implements ChessGameListener, M
 	public ChessGameApplication() {
 		// Create Menus
 		createMenus();
-		//show the size and of window 
+		// show the size and of window
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-	    setPreferredSize(new Dimension(700, 700));
-	    pack();
-	    setLocationRelativeTo(null);
-	    setVisible(true);
+		setPreferredSize(new Dimension(700, 700));
+		pack();
+		setLocationRelativeTo(null);
+		setVisible(true);
 		// create PlaceHolder for games/panes
 		this.placeHolder = new JPanel();
 		this.add(this.placeHolder);
@@ -94,8 +94,8 @@ public class ChessGameApplication extends JFrame implements ChessGameListener, M
 		// Show a pane that asks for username and port to listen on
 		Container contentPane = getContentPane();
 		this.getContentPane().setLayout(new BorderLayout());
-		this.placeHolder=new JPanel();
-		this.getContentPane().add(this.placeHolder,BorderLayout.PAGE_START);
+		this.placeHolder = new JPanel();
+		this.getContentPane().add(this.placeHolder, BorderLayout.PAGE_START);
 		this.placeHolder.setBorder(BorderFactory.createLineBorder(Color.black));
 		this.placeHolder.removeAll();
 		this.placeHolder.add(new NewGamePane(this));
