@@ -6,7 +6,6 @@ public class Knight extends Coin {
 
 	  @Override
 	  public boolean canMove(int dest, ChessGame game) {
-	    // TODO Auto-generated method stub
 	    if (isStrightAndFree(getPosition(), dest, game)) {
 	      return true;
 	    } else {
@@ -15,7 +14,6 @@ public class Knight extends Coin {
 	  }
 
 	  private boolean isStrightAndFree(int position, int dest, ChessGame game) {
-	    // TODO Auto-generated method stub
 	    int currentRow = getRow(position);
 	    int currentColumn = getColumn(position);
 	    int destRow = getRow(dest);
