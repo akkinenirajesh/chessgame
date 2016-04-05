@@ -29,7 +29,7 @@ public class NewGamePane extends JPanel {
 		this.add(tf1);
 		this.add(button1);
 		this.add(button2);
-
+		//
 		// create required controls
 		// create two buttons, cancel, create
 
