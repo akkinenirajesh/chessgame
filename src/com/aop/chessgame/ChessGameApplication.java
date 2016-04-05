@@ -195,7 +195,7 @@ public class ChessGameApplication extends JFrame implements ChessGameListener, M
 		return isValidMove;
 	}
 
-	@Override
+	//@Override
 	public void onResign() {
 		setStatus("Other player resigned, you won!");
 	}
