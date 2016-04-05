@@ -16,7 +16,6 @@ public class Pawn extends Coin {
 	  }
 
 	  private boolean isDiagnalAndFree(int position, int dest, ChessGame game) {
-	    // TODO Auto-generated method stub
 	    int currentRow = getRow(position);
 	    int currentColumn = getColumn(position);
 	    int destRow = getRow(dest);
